@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'practice_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -126,6 +128,17 @@ class ProfileCardPage extends StatelessWidget {
                       _Tag(label: '开源'),
                       _Tag(label: '摄影'),
                     ],
+                  ),
+                  const SizedBox(height: 24),
+
+                  // 自主实践入口（放卡片内，避免被 AppBar 遮挡）
+                  OutlinedButton.icon(
+                    icon: const Icon(Icons.science),
+                    label: const Text('进入自主实践'),
+                    onPressed: () => Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const PracticePage()),
+                    ),
                   ),
                 ],
               ),
