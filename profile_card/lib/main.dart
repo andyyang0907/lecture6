@@ -75,14 +75,18 @@ class ProfileCardPage extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
 
-                  // ② 姓名与签名（两行 Text）
+                  // ② 姓名与签名（两行 Text，长文本防溢出）
                   const Text(
                     '张三',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 4),
                   const Text(
                     'Flutter 学习者 | 移动开发实践中',
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                     style: TextStyle(fontSize: 14, color: Colors.grey),
                   ),
                   const SizedBox(height: 24),
